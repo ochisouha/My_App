@@ -1,0 +1,83 @@
+<section class="h-100 gradient-form" >
+    <div class="container py-3 h-100">
+  
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-xl-20">
+          <div class="card rounded-3 text-black">
+            <div class="row g-0">
+              <div class="col-lg-6">
+                <div class="card-body p-md-5 mx-md-4">
+  
+                  <div class="text-center">
+                    <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/lotus.webp"
+                      style="width: 185px;" alt="logo">
+                    <h4 class="mt-1 mb-5 pb-1">Provider Portal</h4>
+                  </div>
+                  <small class="text-danger">{{msg}}</small> 
+                  <form  #providerform="ngForm">
+                    <h4 >Please fill it in now</h4>
+
+                <div class="form-outline mb-4">
+                      <label class="form-label" for="form2Example22">Name of Place:</label>
+                      <input type="text" id="form2Example22" class="form-control" placeholder="enter the name" [(ngModel)]="provider.name" name="name" required #name="ngModel"
+                      [class.is-invalid]="name.invalid && name.touched">
+                      <small class="text-danger" [class.d-none]="name.valid || name.untouched"> name of place is required field </small>
+                </div>
+                    
+                <div class="form-outline mb-4">
+                      <label class="form-label" for="form2Example22">Location:</label>
+                      <input type="location" id="form2Example22" class="form-control" placeholder="enter the location" [(ngModel)]="provider.location" name="location" required #location="ngModel"
+                      [class.is-invalid]="location.invalid && location.touched">
+                      <small class="text-danger" [class.d-none]="location.valid || location.untouched"> location is required field </small>
+                </div>
+                    
+               
+
+                <div class="form-outline mb-4">
+                    <label class="form-label" for="form2Example22">Longitude of place:</label>
+                    <input type="longitude" id="form2Example22" class="form-control" placeholder="enter the longitude " [(ngModel)]="provider.longitude" name="longitude" required #longitude="ngModel"
+                    [class.is-invalid]="longitude.invalid && longitude.touched">
+                    <small class="text-danger" [class.d-none]="longitude.valid || longitude.untouched"> Longitude number is required field</small>
+                </div>
+            
+                <div class="form-outline mb-4">
+                    <label class="form-label" for="form2Example22">Latitude of place:</label>
+                    <input type="latitude" id="form2Example22" class="form-control" placeholder="enter the latitude" [(ngModel)]="provider.latitude" name="latitude" required #latitude="ngModel"
+                    [class.is-invalid]="latitude.invalid && latitude.touched">
+                    <small class="text-danger" [class.d-none]="latitude.valid || latitude.untouched">latitude number is required field</small>
+                </div>
+
+                <div class="form-outline mb-4">
+                    <label class="form-label" for="form2Example22"> Services:</label>
+                    <textarea class="form-control" id="textAreaExample" rows="3" [(ngModel)]="provider.services" name="services" required #services="ngModel"
+                    [class.is-invalid]="services.invalid && services.touched"></textarea>
+                    <small class="text-danger" [class.d-none]="services.valid || services.untouched">services number is required field</small>
+                </div>
+
+                <div class="form-outline mb-4">
+                    <label class="form-label" for="form2Example22"> Description of place:</label>
+                    <textarea class="form-control" id="textAreaExample" rows="3" [(ngModel)]="provider.description" name="description" required #description="ngModel"
+                    [class.is-invalid]="description.invalid && description.touched"></textarea>
+                    <small class="text-danger" [class.d-none]="description.valid || description.untouched">description number is required field</small>
+                </div>
+
+                <button [disabled]="providerform.form.invalid" type="submit" (click)="provideruser()" class="btn btn-primary">Send</button><br><br>
+                    <div class="d-flex align-items-center justify-content-center pb-4"></div>
+                    
+  
+                  </form>
+  
+                </div>
+              </div>
+              <div class="col-lg-6 d-flex align-items-center gradient-custom-2">
+                <div class="text-white px-3 py-4 p-md-5 mx-md-4">
+                  <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.webp"
+            class="img-fluid" alt="Sample image">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
